@@ -313,7 +313,8 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
    Testimonial Section Start
    ========================================================================== */
 #testimonial {
-  background: #0080FF; }
+  /*background: #0080FF; */
+}
   #testimonial .img-member {
     overflow: hidden;
     margin-top: 22px;
