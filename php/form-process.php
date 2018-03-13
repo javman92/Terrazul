@@ -32,7 +32,8 @@ if (empty($_POST["message"])) {
 }
 
 
-$EmailTo = "richards.javier@gmail.com";
+// $EmailTo = "richards.javier@gmail.com";
+$EmailTo = "contacto@terrazulspa.cl";
 $Subject = "Nuevo mensaje";
 
 // prepare email body text
@@ -50,12 +51,19 @@ $Body .= "Message: ";
 $Body .= $message;
 $Body .= "\n";
 
+$headers = "From:". $email . "\r\n" .
+    "Reply-To:" . $email . "\r\n"
+    ;
+$headers .= "Content-type: text/html";
+
 // send email
-$success = mail($EmailTo, $Subject, $Body, "From:".$email);
+$success = mail($EmailTo, $Subject, $Body,$headers);
 
 // redirect to success page
 if ($success && $errorMSG == ""){
-   echo "success";
+    // echo "success";
+    $newURL = '../index.html';
+    header('Location: '.$newURL);
 }else{
     if($errorMSG == ""){
         echo "Something went wrong :(";
