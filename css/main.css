@@ -577,7 +577,7 @@ a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
     padding: 15px 0px;
     top: 0; }
     .navbar-brand img {
-      width: 75%; }
+      width: 50%; }
   #mobile-menu {
     display: none; }
   .slicknav_menu {
